@@ -1,11 +1,63 @@
 <mvc:View controllerName="project2.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-        <List items="{/Products}">
-            <StandardListItem  title="{ProductName}"></StandardListItem>
-        </List>
+            <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+                <f:Form id="FormDisplayColumn_oneGroup234" editable="false">
+                    <f:title>
+                        <core:Title id="_IDGenTitle1" text="Selection screen" />
+                    </f:title>
+                    <f:layout>
+                        <f:ColumnLayout id="_IDGenColumnLayout1" columnsM="1" columnsL="1" columnsXL="1" />
+                    </f:layout>
+                    <f:formContainers>
+                        <f:FormContainer id="_IDGenFormContainer1">
+                            <f:formElements>
+                                <f:FormElement id="_IDGenFormElement1" label="Farmer Id">
+                                    <f:fields>
+                                        <Input value="{MyModel>/entity1/FarmerId}" id="idFarmerId" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="_IDGenFormElement2" label="Material Number">
+                                    <f:fields>
+                                        <Input id="idMaterialNumber" value="{MyModel>/entity1/Material}" valueHelpRequest="onVHMaterial" showValueHelp="true" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="_IDGenFormElement3" label="Quantity">
+                                    <f:fields>
+                                        <Input id="idQuantity" value="{MyModel>/entity1/Quantity}" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="_IDGenFormElement4" label="Date">
+                                    <f:fields>
+                                        <DatePicker value="{MyModel>/entity1/Date}" displayFormat="dd-MMM-YYYY" valueFormat= "YYYY-MM-dd" id="idDate" />
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement id="_IDGenFormElement5" label="Plant">
+                                    <f:fields>
+                                        <Input id="idPlant" value='{MyModel>/entity1/Plant}' valueHelpRequest="onVHPlant" showValueHelp="true" />
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+            </VBox>
+            <List headerText="Products from Nortwind" items="{/Products}">
+                <StandardListItem title="{ProductName}"></StandardListItem>
+            </List>
         </content>
+        <footer>
+            <OverflowToolbar id="_IDGenOverflowToolbar1">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_IDGenButton1" text="Execute" type="Accept" press="onExecute"/>
+                <Button id="_IDGenButton2" text="Button 1" type="Default" press="onButton1"/>
+                <Button id="_IDGenButton3" text="Button 2" type="Emphasized" press="onButton2"/>
+            </OverflowToolbar>
+        </footer>
     </Page>
 </mvc:View>

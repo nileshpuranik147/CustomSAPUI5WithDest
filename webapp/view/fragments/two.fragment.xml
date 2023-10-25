@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Dialog id="idTwo" title="Hello two">
+      <VBox>
+         <Text id="_IDGenText3" class='sapUiSmallMargin' text="Farmer Id from Main View : {MyModel>/entity1/FarmerId}" />
+         <Text id="_IDGenText4" class='sapUiSmallMargin' text="Emp. Nr. from 1st dialog : {MyModel>/entity2/EmployeeNumber}" />
+         <HBox class='sapUiTinyMargin'>
+            <Label text="Vehicle Name" class='sapUiTinyMargin'/>
+            <Input value="{MyModel>/entity3/VehicleName}" id="idVehicleName" />
+         </HBox>
+      </VBox>
+      <beginButton>
+         <Button text="Close" id="idCLose2" press="onDlg2Close"/>
+      </beginButton>
+   </Dialog>
+</core:FragmentDefinition>
