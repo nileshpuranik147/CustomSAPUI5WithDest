@@ -69,7 +69,7 @@
           "bundleName": "project2.i18n.i18n"
         }
       },
-      "": {
+      "NWDModel": {
         "dataSource": "mainService",
         "preload": true,
         "settings": {}

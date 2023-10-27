@@ -32,6 +32,7 @@ sap.ui.define(
           entity3: {
             VehicleName: "BMW",
           },
+          Suppliers: []
         });
         oModel.setDefaultBindingMode("TwoWay");
         return oModel;

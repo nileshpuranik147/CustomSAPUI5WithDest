@@ -47,8 +47,8 @@
                     </f:formContainers>
                 </f:Form>
             </VBox>
-            <List headerText="Products from Nortwind" items="{/Products}">
-                <StandardListItem title="{ProductName}"></StandardListItem>
+            <List headerText="Products from Nortwind" items="{NWDModel>/Products}">
+                <StandardListItem title="{NWDModel>ProductName}"></StandardListItem>
             </List>
         </content>
         <footer>
